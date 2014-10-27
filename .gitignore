@@ -1,7 +1,7 @@
 /Temp
 /obj
 /Builds
-/library
+/Library
 *.csproj
 *.unityproj
 *.sln
