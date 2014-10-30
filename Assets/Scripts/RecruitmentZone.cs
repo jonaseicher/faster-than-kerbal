@@ -9,7 +9,11 @@ public class RecruitmentZone : MonoBehaviour
     public Text StatusText;
     public Text PlayerNameText;
     public Text GameNameText;
-	
+    public GameObject ItemPrefab;
+    private int timer = 0;
+    public int RefreshTime = 200;
+    public ScrollableList ScrollableGameList;
+
 	public void Awake()
 	{
 
@@ -41,29 +45,13 @@ public class RecruitmentZone : MonoBehaviour
 
     public void RefreshGames()
     {
-        if (PhotonNetwork.GetRoomList().Length == 0)
+        
+        RoomInfo[] roomList = PhotonNetwork.GetRoomList();
+        if (roomList.Length > 0)
         {
-            //StatusText.text = "Currently no games are available. Create one.";
-        }
-        else
-        {
-            StatusText.text = PhotonNetwork.GetRoomList() + " currently available. Join either:";
-
-            // Room listing: simply call GetRoomList: no need to fetch/poll whatever!
-            foreach (RoomInfo roomInfo in PhotonNetwork.GetRoomList())
-            {
-                GUILayout.BeginHorizontal();
-                //StatusText.text = roomInfo.name + " " + roomInfo.playerCount + "/" + roomInfo.maxPlayers;
-                if (GUILayout.Button("Join"))
-                {
-                    PhotonNetwork.JoinRoom(roomInfo.name);
-                }
-
-                GUILayout.EndHorizontal();
-            }
-
-
-        }
+            Debug.Log(roomList[0].name);
+            ScrollableGameList.ShowGames(roomList);
+        }   
     }
 	
 	public void OnGUI()
@@ -84,13 +72,20 @@ public class RecruitmentZone : MonoBehaviour
         {
             StatusText.color = Color.green;
             StatusText.text = PhotonNetwork.countOfPlayers + " users are online in " + PhotonNetwork.countOfRooms + " games.";
+
+            if (++timer > RefreshTime)
+            {
+                timer = 0;
+                RefreshGames();
+            }
         }
 		
 	}
 
     public void CreateGame() 
     {
-			PhotonNetwork.CreateRoom(this.GameNameText.text, new RoomOptions() { maxPlayers = 5 }, null);
+        Debug.Log("Creating Game with Name: " + GameNameText.text);
+	    PhotonNetwork.CreateRoom(this.GameNameText.text, new RoomOptions() { maxPlayers = 5 }, null);
     }
 
     public void ToMainMenu()
@@ -148,4 +143,6 @@ public class RecruitmentZone : MonoBehaviour
 	{
 		Debug.Log("OnFailedToConnectToPhoton. StatusCode: " + parameters + " ServerAddress: " + PhotonNetwork.networkingPeer.ServerAddress);
 	}
+
+
 }
