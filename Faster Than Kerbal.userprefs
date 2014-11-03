@@ -1,17 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneChanger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\DonePlayerMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\SceneChanger.cs" Line="20" Column="6" />
-      <File FileName="Assets\Scripts\ScrollableList.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerNameChange.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RecruitmentZone.cs" Line="1" Column="1" />
-      <File FileName="Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\WorkerMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\WorkerInGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PhotonDebug.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneChange.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ExitGame.js" Line="1" Column="1" />
-      <File FileName="c:\Users\Jonas\Documents\Unity Games\Faster Than Kerbal\Assets\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" Line="1" Column="1" />
+      <File FileName="..\Faster Than Kerbal Showcase\Assets\_scripts\Util.cs" Line="1" Column="1" />
+      <File FileName="Assets\Character\DonePlayerMovement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
