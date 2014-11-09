@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\DonePlayerMovement.cs">
     <Files>
+      <File FileName="Assets\Scripts\ScrollableList.cs" Line="1" Column="1" />
       <File FileName="..\Faster Than Kerbal Showcase\Assets\_scripts\Util.cs" Line="1" Column="1" />
       <File FileName="Assets\Character\DonePlayerMovement.cs" Line="1" Column="1" />
     </Files>
