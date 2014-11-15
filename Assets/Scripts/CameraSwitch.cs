@@ -18,7 +18,7 @@ public class CameraSwitch : MonoBehaviour {
 	void Update () {
 	
 		//This will toggle the enabled state of the two cameras between true and false each time
-		if (Input.GetKeyUp(KeyCode.Space)) {
+		if (Input.GetButtonUp("Fire")) {
 			camera.enabled = !camera.enabled;
 			camera2.enabled = !camera2.enabled;
 

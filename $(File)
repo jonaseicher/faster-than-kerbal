@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class DonePlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 	public enum Controls
 	{

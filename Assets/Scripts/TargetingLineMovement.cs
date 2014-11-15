@@ -26,7 +26,7 @@ public class TargetingLineMovement : MonoBehaviour {
 	void Update () {
 
         // Fire
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetButtonUp("Fire"))
         {
             if (!firing)
             {
